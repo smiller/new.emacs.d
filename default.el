@@ -6,5 +6,10 @@
   'package-archives
   (add-to-list 'package-archives (cons "marmalade" "http://marmalade-repo.org/packages/")))
 (customize-set-variable 'show-paren-mode t)
+
 (customize-save-customized)
 (package-refresh-contents)
+
+(define-key input-decode-map "\e[1;2A" [S-up])
+(windmove-default-keybindings)
+(setq windmove-wrap-around t)
